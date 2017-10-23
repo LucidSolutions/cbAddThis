@@ -1,0 +1,37 @@
+{
+    "name":"Add This Social Module",
+    "shortDescription":"Add This Social Module for ContentBox",
+    "location":"https://github.com/LucidSolutions/cbAddThis/archive/master.zip",
+    "version":"1.0",
+    "slug":"cbAddThis",
+    "author":"Lucid Outsourcing Solutions",
+    "homepage":"https://github.com/LucidSolutions/cbAddThis",
+    "documentation":"https://github.com/LucidSolutions/cbAddThis",
+    "repository":{
+        "type":"git",
+        "url":"https://github.com/LucidSolutions/cbAddThis"
+    },
+    "bugs":"https://github.com/LucidSolutions/cbAddThis/issues",
+    "type":"contentbox-modules",
+    "license":[
+        {
+            "type":"Apache2",
+            "url":"http://www.apache.org/licenses/LICENSE-2.0.html"
+        }
+    ],
+    "contributors":[
+        
+    ],
+    "dependencies":{
+    },
+    "devDependencies":{
+        
+    },
+    "installPaths":{
+    },
+    "ignore":[
+        "**/.*",
+        "tests",
+        "screenshots"
+    ]
+}
