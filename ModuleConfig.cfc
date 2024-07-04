@@ -9,9 +9,9 @@ component {
 	// Module Properties
 	this.title 				= "Add This Social Module";
 	this.author 			= "Lucid OutSourcing Solutions";
-	this.webURL 			= "http://www.lucidsolutions.in";
+	this.webURL 			= "https://lucidoutsourcing.com/";
 	this.description 		= "Add This Social Module for ContentBox";
-	this.version			= "1.0";
+	this.version			= "2.0";
 	// If true, looks for views in the parent first, if not found, then in the module. Else vice-versa
 	this.viewParentLookup 	= true;
 	// If true, looks for layouts in the parent first, if not found, then in module. Else vice-versa
@@ -69,7 +69,7 @@ component {
 
 		// Custom Declared Interceptors
 		interceptors = [
-			{ class="#moduleMapping#.interceptors.AddThisSocial", properties={ entryPoint="cbadmin" }, name="AddThisSocial@cbAddThis" }
+			{ class="#moduleMapping#.interceptors.AddThisSocial", properties={ entryPoint="cbadmin" }, name="AddThisSocial@contentboxAddThis" }
 		];
 
 		// Binder Mappings
@@ -82,7 +82,7 @@ component {
 	*/
 	function onLoad(){
 		// Let's add ourselves to the main menu in the Modules section
-		var menuService = controller.getWireBox().getInstance( "AdminMenuService@cb" );
+		var menuService = controller.getWireBox().getInstance( "AdminMenuService@contentbox" );
 		// Add Menu Contribution
 		menuService.addSubMenu(topMenu=menuService.MODULES,name="cbAddThis",label="Add This Social",href="#menuService.buildModuleLink('cbAddThis','home')#" );
 	}
@@ -99,7 +99,7 @@ component {
 	*/
 	function onUnload(){
 		// Let's remove ourselves to the main menu in the Modules section
-		var menuService = controller.getWireBox().getInstance( "AdminMenuService@cb" );
+		var menuService = controller.getWireBox().getInstance( "AdminMenuService@contentbox" );
 		// Remove Menu Contribution
 		menuService.removeSubMenu(topMenu=menuService.MODULES,name="cbAddThis" );
 	}

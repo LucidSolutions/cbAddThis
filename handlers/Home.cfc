@@ -1,7 +1,7 @@
 component{
 
-	property name="settingService" 	inject="settingService@cb";
-	property name="CBHelper"		inject="id:CBHelper@cb";
+	property name="settingService" 	inject="settingService@contentbox";
+	property name="CBHelper"		inject="id:CBHelper@contentbox";
 
 	function index(event,rc,prc){
 		prc.xehSave = CBHelper.buildModuleLink( "cbAddThis", "home.saveSettings" );
@@ -27,7 +27,7 @@ component{
 		settingService.save( setting );
 				
 		// Messagebox
-		getModel( "messagebox@cbMessagebox" ).info( "Settings Saved & Updated!" );
+		getInstance( "messagebox@cbMessagebox" ).info( "Settings Saved & Updated!" );
 		// Relocate via CB Helper
 		CBHelper.setNextModuleEvent( "cbAddThis", "home.index" );
 	}
